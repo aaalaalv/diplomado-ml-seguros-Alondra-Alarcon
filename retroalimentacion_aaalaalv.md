@@ -79,3 +79,39 @@ Archivo: `diplomado-ml-seguros-Alondra-Alarcon\modulo 1\sesion7\sesion7_M1_noteb
 - Promedio: 9.355 / 10
 - Bonus: +0.5
 - **Final: 9.86 / 10**
+
+---
+
+# Retroalimentación — Módulo 4 · Tema 2 (GLM con Python)
+
+**Alumno:** Alondra Abril Alarcón Álvarez
+**Variable asignada:** `uso`
+
+## Desglose por pregunta
+
+| Pregunta | Pts | Comentario |
+|---|---|---|
+| P1 | 10/10 | φ=1.1664>1 y Cameron-Trivedi (α=0.0744, p=3.7e-56) → sobredispersión leve (φ<1.5) → concluye correctamente QuasiPoisson. |
+| P2 | 10/10 | Identifica bien Particular (ref, RF=1) y Trabajo (RF=0.9887, −1.13%); revisa que el IC [0.9272,1.0542] cruza 1 y p=0.7281>0.05 → decide agrupar con la referencia. |
+| P3 | 10/10 | Explica correctamente `exp(η)=Σsiniestros/Σexposición` y qué aporta el GLM sobre una tabla empírica (multivariable, IC, significancia). |
+| P4 | 10/10 | CV estable, Gamma modela E[Y] directo, Lognormal fuera de la familia exponencial, corrección de sesgo en log(Y). |
+| P5 | 8/10 | Identifica bien que BN gana por AIC/BIC y explica el pseudo-R² bajo correctamente, pero luego añade que "mantendría Quasi-Poisson" sin reconciliar esto con la brecha de AIC (~156 pts, evidencia fuerte a favor de BN). |
+| P6 | 10/10 | Compara bien ambas direcciones (−1.13% frec, −1.32% sev, misma dirección), nota la no-significancia en frecuencia y concluye correctamente por qué modelar F×S por separado. |
+| P7 | 10/10 | Distingue correctamente calibración (ratio≈1.02, sobreestima 2.49%) de discriminación (Gini 0.2315, modesto). |
+| P8 | 9/10 | Identifica bien niveles más alto/bajo y traduce a −2.06% de descuento, pero mezcla conceptualmente "referencia" (nivel categórico) con el factor de tarifa (que es relativo a la prima promedio del portafolio). |
+| P9 | 10/10 | Síntesis completa: integra frecuencia, severidad, prima pura e IC, en tono defendible ante CNSF. |
+
+## Redacción: 9/10
+
+Lenguaje actuarial correcto, clara y coherente entre partes; solo pequeños tropiezos de redacción
+(p. ej. "usaría sería" en P1, un asterisco de markdown mal cerrado en P3, "se muestra diferencias"
+en P9).
+
+## Nota final: 96/100 (calificación: 9.6/10)
+
+## Comentarios generales
+
+Una de las evaluaciones más sólidas: interpretas bien los números de tu propia variable (`uso`),
+distingues calibración de discriminación, y usas el lenguaje técnico correctamente. El único punto a
+observar es P5, donde tu preferencia personal (Quasi-Poisson) no queda del todo justificada frente a
+la brecha de AIC/BIC que tú misma reportas a favor de Binomial Negativa.
